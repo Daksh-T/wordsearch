@@ -33,7 +33,7 @@ python wordsearch.py
 ```python
 words = get_valid_words(8) # Fetch 8 words for the puzzle
 ```
-- You can also customize the extra space added to the grid by changing the value returned from the `get_longest_word` function in line 18 of the script. The default value is 3.
+- You can also customize the extra space added to the grid by changing the number added to the value returned from the `get_longest_word` function in line 18 of the script. The default setting is 3.
 ```python
     return max(len(word) for word in words) + 3
 ```

@@ -24,16 +24,27 @@ pip install requests
 ```
 python wordsearch.py
 ```
+for the TUI version
+
+or
+
+```
+python gui.py
+```
+for the GUI version
 
 4. The script will generate a word search puzzle grid and print it to the console, followed by a list of the words placed in the puzzle in a box.
+The GUI version prints a grid on the right side and a list of words that are to be searched for, on the left. You can enter words into the input box as you find them. If the word you entered is found in the list, the word found will turn green in the list. Else if the word is not present in the list, the input box will turn red.
 
 ## Customization
 
-- You can customize the number of words fetched by changing the argument passed to the `get_valid_words` function in line 97 of the script. The default value is 8.
+- You can customize the number of words fetched by changing the argument passed to the `get_valid_words` function in line 97 of the script (line 214 for GUI)
 ```python
-words = get_valid_words(8) # Fetch 8 words for the puzzle
+words = get_valid_words(8)        # Default is 8 words
 ```
-- You can also customize the extra space added to the grid by changing the number added to the value returned from the `get_longest_word` function in line 18 of the script. The default setting is 3.
+- You can also customize the extra space added to the grid by changing the number added to the value returned from the `get_longest_word` function in line 18 of the script (line 38 for GUI)
 ```python
-    return max(len(word) for word in words) + 3
+    return max(len(word) for word in words) + 3        # Default is 3
 ```
+
+There is no GUI settings page to adjust these yet.
